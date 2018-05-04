@@ -16,7 +16,15 @@
     "express": "^4.14.0",
     "http": "0.0.0",
     "method-override": "^2.3.6",
-    "morgan": "^1.7.0",
-    "superlogin": "agentilela/superlogin"
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.5",
+    "gulp-watch": "^5.0.0",
+    "nodemon": "^1.17.3",
+    "pouchdb": "^6.4.3",
+    "pouchdb-seed-design": "^0.3.0",
+    "yargs": "^11.0.0"
   }
 }

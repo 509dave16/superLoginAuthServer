@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var cors = require('cors');
 var SuperLogin = require('superlogin').default;
+var path = require('path');
+var config = require('./config.js');
 //      "superlogin": "agentilela/superlogin"
 
 var app = express();
@@ -16,49 +18,9 @@ app.use(cors());
 app.use(function(req, res, next) {
    res.header("Access-Control-Allow-Origin", "*");
    res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
-   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
    next();
 });
- 
-var config = {
-  dbServer: {
-    protocol: 'http://',
-    host: 'localhost:5984',
-    user: '',
-    password: '',
-    userDB: 'sl-users',
-    couchAuthDB: '_users'
-  },
-  mailer: {
-    fromEmail: 'gmail.user@gmail.com',
-    options: {
-      service: 'Gmail',
-        auth: {
-          user: 'gmail.user@gmail.com',
-          pass: 'userpass'
-        }
-    }
-  },
-  security: {
-    maxFailedLogins: 3,
-    lockoutTime: 600,
-    tokenLife: 86400,
-    loginOnRegistration: true,
-  },
-  userDBs: {
-    defaultDBs: {
-      private: ['supertest']
-    },
-    model: {
-      supertest: {
-        permissions: ['_reader', '_writer', '_replicator']
-      }
-    }
-  },
-  providers: {
-    local: true
-  }
-}
  
 // Initialize SuperLogin
 var superLoginPromise = SuperLogin(config);
