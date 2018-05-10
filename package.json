@@ -16,7 +16,8 @@
     "express": "^4.14.0",
     "http": "0.0.0",
     "method-override": "^2.3.6",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "superlogin": "agentilela/superlogin"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
