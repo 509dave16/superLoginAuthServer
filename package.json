@@ -17,7 +17,7 @@
     "http": "0.0.0",
     "method-override": "^2.3.6",
     "morgan": "^1.7.0",
-    "superlogin": "file:../superlogin"
+    "superlogin": "git+https://github.com/509dave16/superlogin-next.git"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

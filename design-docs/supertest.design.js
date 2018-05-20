@@ -59,7 +59,7 @@ module.exports = {
             for(var key in secObject) {
                 messagesStr += ' | ' + key + ' : ' + secObject[key];
             }
-            throw({ forbidden: messagesStr});
+            // throw({ forbidden: messagesStr});
         }
 
     }

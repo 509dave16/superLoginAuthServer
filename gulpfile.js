@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const shell = require('gulp-shell');
 const argv = require('yargs').argv;
 const watch = require('gulp-watch');
 const request = require('request');
@@ -9,7 +8,7 @@ const couchdbServerUrl = `http://${argv.username}:${argv.password}@${argv.host}:
 const config = require(argv.config);
 gulp.task('default', () => {
     const patternToWatch = `${config.userDBs.designDocDir}/**/*.design.js`;
-    console.log(`Pattern to watch: ${patternToWatch}`)
+    console.log(`Pattern to watch: ${patternToWatch}`);
     return watch(patternToWatch, { ignoreInitial: false }, (vinyl) => {
         const designDoc = vinyl.stem;
         const designDocObj = require(vinyl.path);
