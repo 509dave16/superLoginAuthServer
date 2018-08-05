@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cors = require('cors');
 var SuperLogin = require('superlogin').default;
 var path = require('path');
-var config = require('./config.js');
+var config = require('./config');
 //      "superlogin": "agentilela/superlogin"
 
 var app = express();
