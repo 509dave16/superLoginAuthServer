@@ -1,5 +1,5 @@
 var path = require('path');
-var dbServer = require('./dbserver.dist');
+var dbServer = require('./dbserver.dist.js');
 var config = {
     dbServer,
     mailer: {
